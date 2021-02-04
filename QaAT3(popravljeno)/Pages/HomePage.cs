@@ -10,13 +10,17 @@ namespace QaAT3_popravljeno_.Pages
 {
     public class HomePage : BasePage
     {
+        #region Controls
+        IWebElement loginButton => driver.FindElement(By.XPath("//*[@id='loginbtn']"));
+        IWebElement registerButton => driver.FindElement(By.XPath("//a[contains(text(), 'REGISTRUJTE SE')]"));
+        #endregion
         public HomePage(IWebDriver driver) : base(driver) { }
 
 
         public RegisterPage GoToRegisterPage()
         {
-            driver.FindElement(By.XPath("//*[@id='loginbtn']")).Click();
-            driver.FindElement(By.XPath("//a[contains(text(), 'REGISTRUJTE SE')]")).Click();
+            loginButton.Click();
+            registerButton.Click();
 
             return new RegisterPage(driver);
             }
