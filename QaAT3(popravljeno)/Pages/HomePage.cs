@@ -14,6 +14,7 @@ namespace QaAT3_popravljeno_.Pages
         IWebElement loginButton => driver.FindElement(By.XPath("//*[@id='loginbtn']"));
         IWebElement registerButton => driver.FindElement(By.XPath("//a[contains(text(), 'REGISTRUJTE SE')]"));
         #endregion
+
         public HomePage(IWebDriver driver) : base(driver) { }
 
 
