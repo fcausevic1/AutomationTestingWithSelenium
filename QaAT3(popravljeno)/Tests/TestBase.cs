@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using QaAT3_popravljeno_.DriverManager;
 using QaAT3_popravljeno_.Pages;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace QaAT3_popravljeno_.Tests
         [SetUp]
         public void SetUp()
         {
-            driver = new ChromeDriver();
+            driver = new ChooseDriver().CreateDriver("chrome");
             driver.Navigate().GoToUrl("https://olx.ba");
             driver.Manage().Window.Maximize();
             driver.FindElement(By.XPath("//button[contains(text(),'Prihvati i zatvori')]")).Click();

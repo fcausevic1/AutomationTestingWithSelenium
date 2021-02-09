@@ -20,5 +20,11 @@ namespace QaAT3_popravljeno_.Tests
 
         }
 
+        [Test]
+        public void VerifyThatUserCanRegisterTest()
+        {
+
+        }
+
     }
 }
